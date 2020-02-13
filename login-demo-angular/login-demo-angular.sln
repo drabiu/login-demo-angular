@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "login-demo-angular", "login-demo-angular.csproj", "{BD8A8392-2EDF-435A-AD24-F626B6DEC06E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "login-demo-backend", "..\login-demo-backend\login-demo-backend.csproj", "{571942C2-9648-4BEB-A648-2634E27A7702}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD8A8392-2EDF-435A-AD24-F626B6DEC06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8A8392-2EDF-435A-AD24-F626B6DEC06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8A8392-2EDF-435A-AD24-F626B6DEC06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8A8392-2EDF-435A-AD24-F626B6DEC06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571942C2-9648-4BEB-A648-2634E27A7702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571942C2-9648-4BEB-A648-2634E27A7702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571942C2-9648-4BEB-A648-2634E27A7702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571942C2-9648-4BEB-A648-2634E27A7702}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59BD4CAB-BAB8-4419-B0C6-5025173A3CF3}
+	EndGlobalSection
+EndGlobal
