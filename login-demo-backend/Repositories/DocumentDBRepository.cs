@@ -13,7 +13,6 @@ namespace login_demo_backend
     {
         private static readonly string Endpoint = "https://localhost:8081/";
         private static readonly string Key = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
-        private static readonly string PartitionKey = "/userlogindata";
         private static readonly string DatabaseId = "DOCUMENTDBDATABASEID";
         private static readonly string CollectionId = "Users";
         private static DocumentClient client;

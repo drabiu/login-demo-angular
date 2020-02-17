@@ -6,10 +6,21 @@
   <base href="/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-signin-client_id" content="468923844593-uev8e0igl667dri8oqvpb9ilve2crfeh.apps.googleusercontent.com">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-  <body>
-    <app-root>Loading...</app-root>
-  </body>
+<body>
+<app-root>Loading...</app-root>
+<script src="https://apis.google.com/js/platform.js"></script>
+<!--<script>
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+</script>-->
+</body>
 </html>

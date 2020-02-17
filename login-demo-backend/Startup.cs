@@ -52,6 +52,16 @@ namespace login_demo_backend
                 };
             });
 
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    IConfigurationSection googleAuthNSection =
+                        Configuration.GetSection("Authentication:Google");
+
+                    options.ClientId = googleAuthNSection["ClientId"];
+                    options.ClientSecret = googleAuthNSection["ClientSecret"];
+                });
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",

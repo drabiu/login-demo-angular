@@ -1,8 +1,29 @@
+<!--<script>
+  function onSignIn(googleUser) {
+    debugger;
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+</script>-->
+<!--<div class="g-signin2" data-onsuccess="onSignedIn" data-theme="dark"></div>-->
+<!--<a href="#" onclick="signOut();" id="signout"></a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut();
+  }
+
+  function onSignedIn(googleUser) {
+    var signoutElement = document.getElementById('signout');
+    signoutElement.innerHTML =
+      'Sign out ' + googleUser.getBasicProfile().getEmail();
+  }
+</script>-->
+
 <div class="col-md-6 offset-md-3 mt-5">
-  <div class="alert alert-info">
-    Username: test<br />
-    Password: test
-  </div>
   <div class="card">
     <h4 class="card-header">Angular 8 Basic Auth Login Example</h4>
     <div class="card-body">
@@ -21,6 +42,7 @@
             <div *ngIf="f.password.errors.required">Password is required</div>
           </div>
         </div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <button [disabled]="loading" class="btn btn-primary">
           <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
           Login
