@@ -3,6 +3,7 @@ using login_demo_backend.Middlewares;
 using login_demo_backend.Models;
 using login_demo_backend.Password;
 using login_demo_backend.Services;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -51,16 +52,19 @@ namespace login_demo_backend
                     ValidateLifetime = true
                 };
             });
+            //    .AddFacebook(facebookOptions =>
+            //{
+            //    facebookOptions.AppId = "635984350523176";//Configuration["Authentication:Facebook:AppId"];
+            //    facebookOptions.AppSecret = "a543a839a7c07e98c26d44392a9bebf2"; //Configuration["Authentication:Facebook:AppSecret"];
+            //});
+            //}).AddGoogle(options =>
+            //    {
+            //        IConfigurationSection googleAuthNSection =
+            //            Configuration.GetSection("Authentication:Google");
 
-            services.AddAuthentication()
-                .AddGoogle(options =>
-                {
-                    IConfigurationSection googleAuthNSection =
-                        Configuration.GetSection("Authentication:Google");
-
-                    options.ClientId = googleAuthNSection["ClientId"];
-                    options.ClientSecret = googleAuthNSection["ClientSecret"];
-                });
+            //        options.ClientId = "468923844593-uev8e0igl667dri8oqvpb9ilve2crfeh.apps.googleusercontent.com"; //googleAuthNSection["ClientId"];
+            //        options.ClientSecret = "4AHlD8BmW6g8HQ3krtYoJ5_T"; //googleAuthNSection["ClientSecret"];
+            //    });
 
             services.AddCors(options =>
             {

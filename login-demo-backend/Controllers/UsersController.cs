@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using login_demo_backend.Token;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -43,6 +44,27 @@ namespace login_demo_backend.Controllers
         public async Task<IActionResult> Post([FromBody]Credentials credentials)
         {
             var user = await _userService.Authenticate(credentials);
+
+            return Ok(user);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("googleSignIn")]
+        public async Task<IActionResult> PostGoogle(string token)
+        {
+            var user = await GoogleToken.ValidateCurrentToken(token);
+
+            return Ok(user);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("facebookSignIn")]
+        public async Task<IActionResult> PostFacebook(string token)
+        {
+            var facebook = new FacebookToken();
+            var user = await facebook.GetUserFromFacebookAsync(token);
 
             return Ok(user);
         }

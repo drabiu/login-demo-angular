@@ -9,18 +9,50 @@
   <meta name="google-signin-client_id" content="468923844593-uev8e0igl667dri8oqvpb9ilve2crfeh.apps.googleusercontent.com">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
 </head>
 <body>
 <app-root>Loading...</app-root>
 <script src="https://apis.google.com/js/platform.js"></script>
-<!--<script>
+<script>
   function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    console.log('Token || ' + googleUser.getAuthResponse().id_token);
+    window.angularComponentReference.zone.run(() => { window.angularComponentReference.loadAngularFunction(googleUser.getAuthResponse().id_token); });
   }
-</script>-->
+  //window.fbAsyncInit = function() {
+  //  FB.init({
+  //    appId      : '635984350523176',
+  //    cookie     : true,
+  //    xfbml      : true,
+  //    version    : 'v6.0'
+  //  });
+      
+  //  FB.AppEvents.logPageView();   
+      
+  //};
+
+  //(function(d, s, id){
+  //  var js, fjs = d.getElementsByTagName(s)[0];
+  //  if (d.getElementById(id)) {return;}
+  //  js = d.createElement(s); js.id = id;
+  //  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  //  fjs.parentNode.insertBefore(js, fjs);
+  //}(document, 'script', 'facebook-jssdk'));
+
+  //function checkLoginState() {
+  //  FB.getLoginStatus(function(response) {
+  //    statusChangeCallback(response);
+  //  });
+  //}
+</script>
 </body>
 </html>

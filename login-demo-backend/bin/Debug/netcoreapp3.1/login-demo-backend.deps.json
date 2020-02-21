@@ -24,6 +24,9 @@
     ".NETCoreApp,Version=v3.1": {
       "login-demo-backend/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth": "1.43.0",
+          "Microsoft.AspNetCore.Authentication.Facebook": "3.1.2",
+          "Microsoft.AspNetCore.Authentication.Google": "3.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.1",
           "Microsoft.Azure.DocumentDB.Core": "2.9.2",
           "Microsoft.Extensions.Logging.Debug": "3.1.1",
@@ -307,6 +310,77 @@
         },
         "compile": {
           "login-demo-backend.dll": {}
+        }
+      },
+      "Google.Apis/1.43.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.43.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.43.0.0",
+            "fileVersion": "1.43.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.43.0": {
+        "dependencies": {
+          "Google.Apis": "1.43.0",
+          "Google.Apis.Core": "1.43.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
+            "assemblyVersion": "1.43.0.0",
+            "fileVersion": "1.43.0.0"
+          },
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.43.0.0",
+            "fileVersion": "1.43.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.43.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.43.0.0",
+            "fileVersion": "1.43.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.6801"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61510"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.1": {
@@ -3671,6 +3745,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Google.Apis/1.43.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-obrhmOs3G1NdKb6vJukj5nls3FJ8qcheSugvUDA5fHA+4sb9hOvSgtR4rzSiBFTSn30d8C9aJAUFlBtcFi4ltA==",
+      "path": "google.apis/1.43.0",
+      "hashPath": "google.apis.1.43.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.43.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-612MnDeSfltoLztQnlG78ndEJn4kCKP/tnqKMI4l0biZoVJb9l+H1KtU1tTLW1ftiq+mgSoGfAR4jS2JGGOJRA==",
+      "path": "google.apis.auth/1.43.0",
+      "hashPath": "google.apis.auth.1.43.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.43.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5uzXQP58JFV1VKENO+/IALD1ID8PSff8jFVL9jYUdiXKCI82/1hR8PAx4sQcAenFrFgCNAPSwYJRFJ46OvtBQ==",
+      "path": "google.apis.core/1.43.0",
+      "hashPath": "google.apis.core.1.43.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FkC/CgnRkArFG/+az8fC0cJnJNezzVW6hIQjKuSS1i1Jr0Lm38lgtHlBt8tf9cPO4IBaA6CK3PBx5APTkic20w==",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.2",
+      "hashPath": "microsoft.aspnetcore.authentication.facebook.3.1.2.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cpAYyp9r3x7QJqNF7GccojBsHhX+Q6D09Z0TxgwsKGscQnGhGCnKQe/Cn0aI0pIoCAHvhxYtAZkriLIB9933VQ==",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.1",
+      "hashPath": "microsoft.aspnetcore.authentication.google.3.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.1": {
       "type": "package",

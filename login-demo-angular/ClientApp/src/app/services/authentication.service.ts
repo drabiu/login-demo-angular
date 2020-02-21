@@ -42,6 +42,38 @@ export class AuthenticationService {
     }));
   }
 
+  googleSignIn(token: string) {
+    let options = {
+      params: {
+        'token': token
+      }
+    };
+
+    return this.http.post<any>(`${environment.apiUrl}/users/googleSignIn/`, {}, options)
+      .pipe(map(user => {
+        //store user details and basic auth credentials in local storage to keep user logged in between page refreshes
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        this.currentUserSubject.next(user);
+        return user;
+      }));
+  }
+
+  facebookSignIn(token: string) {
+    let options = {
+      params: {
+        'token': token
+      }
+    };
+
+    return this.http.post<any>(`${environment.apiUrl}/users/facebookSignIn/`, {}, options)
+      .pipe(map(user => {
+        //store user details and basic auth credentials in local storage to keep user logged in between page refreshes
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        this.currentUserSubject.next(user);
+        return user;
+      }));
+  }
+
   revoke() {
     let options = {
       params: {

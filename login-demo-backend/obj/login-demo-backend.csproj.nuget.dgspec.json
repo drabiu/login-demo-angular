@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\login-demo-backend\\login-demo-backend.csproj": {}
+    "D:\\login-demo\\login-demo-backend\\login-demo-backend.csproj": {}
   },
   "projects": {
-    "D:\\login-demo-backend\\login-demo-backend.csproj": {
+    "D:\\login-demo\\login-demo-backend\\login-demo-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\login-demo-backend\\login-demo-backend.csproj",
+        "projectUniqueName": "D:\\login-demo\\login-demo-backend\\login-demo-backend.csproj",
         "projectName": "login-demo-backend",
-        "projectPath": "D:\\login-demo-backend\\login-demo-backend.csproj",
+        "projectPath": "D:\\login-demo\\login-demo-backend\\login-demo-backend.csproj",
         "packagesPath": "C:\\Users\\mdrab\\.nuget\\packages\\",
-        "outputPath": "D:\\login-demo-backend\\obj\\",
+        "outputPath": "D:\\login-demo\\login-demo-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.43.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.1, )"

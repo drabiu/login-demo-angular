@@ -1,11 +1,11 @@
 <!--<script>
   function onSignIn(googleUser) {
-    debugger;
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    window.angularComponentReference.zone.run(() => { window.angularComponentReference.loadAngularFunction(); });
   }
 </script>-->
 <!--<div class="g-signin2" data-onsuccess="onSignedIn" data-theme="dark"></div>-->
@@ -42,13 +42,21 @@
             <div *ngIf="f.password.errors.required">Password is required</div>
           </div>
         </div>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <button [disabled]="loading" class="btn btn-primary">
-          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-          Login
-        </button>
+        <div class="card-block">
+          <div class="g-signin2" data-onsuccess="onSignIn" #loginRef></div>
+          <!--<fb:login-button scope="public_profile,email"
+                       onlogin="checkLoginState();">
+          </fb:login-button>-->
+          <button type="button" class="btn" (click)="submitFBLogin();">Login with facebook</button>
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+          </button>
+        </div>
         <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
       </form>
+      <!--<button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
+      <button class="btn btn-social-icon btn-facebook" (click)="signInWithFB()"><span class="fa fa-facebook"></span></button>-->
     </div>
   </div>
 </div>
